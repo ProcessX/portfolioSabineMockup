@@ -1,0 +1,81 @@
+@use '../lib';
+
+.block.block--about{
+    .about__mugshot{
+        max-width: 100%;
+    }
+
+    .about__details{
+        margin-top: 8rem;
+
+        .details__title{
+            margin: 0;
+            padding-bottom: 1rem;
+            position: relative;
+
+            &::after{
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: lib.$blue;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .details__li{
+
+            .details__el{
+                position: relative;
+                padding: 1rem 0;
+
+                &:after{
+                    content: "";
+                    height: 1px;
+                    width: 100%;
+                    background-color: lib.$ivory-dark;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+
+    @include lib.tablet{
+        .about__mugshot{
+            grid-column: 3/11;
+        }
+
+        .para{
+            grid-column: 2/12;
+        }
+
+        .about__details{
+            grid-column: 2/12;
+        }
+    }
+}
+
+
+.about__details--career{
+    .career__year{
+        margin: 0;
+        font-size: 1.24rem;
+    }
+
+    .career__li{
+
+        .career__el{
+            padding-left: 1rem;
+
+            .career__step{
+                margin: 1rem 0 0 0;
+            }
+        }
+    }
+}
+
+

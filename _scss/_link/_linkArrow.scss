@@ -1,0 +1,22 @@
+@use '../lib';
+
+.link.link--arrow{
+
+    &:hover{
+
+        &::after{
+            transform: translateX(1rem);
+        }
+    }
+
+    &::after{
+        content: "";
+        height: 1rem;
+        width: 1.5rem;
+        display: inline-block;
+        background-image: url('./asset/icon/arrow-1.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 1rem;
+    }
+}

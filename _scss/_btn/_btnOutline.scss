@@ -1,0 +1,14 @@
+@use '../lib';
+
+.btn.btn--outline{
+    display: inline-block;
+    text-transform: uppercase;
+    border: solid 1px lib.$blue;
+    padding: 0.8rem 1.6rem;
+    letter-spacing: 0.1em;
+
+    &:hover,&:focus{
+        background-color: lib.$blue;
+        color: lib.$ivory-light;
+    }
+}

@@ -1,0 +1,58 @@
+@use '../lib';
+
+.block.block--work{
+
+    .work__li{
+        counter-reset: index-work;
+
+        .work__el{
+            counter-increment: index-work;
+            margin: 9rem 0;
+
+            &:first-child{
+                margin-top: 0;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            .work__title{
+                text-align: center;
+                margin: 1.5rem 0;
+
+                .work__link{
+                    position: relative;
+
+                    &:before{
+                        content: "0" counter(index-work);
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 1rem;
+                        position: absolute;
+                        right: calc(100% + 0.3em);
+                        top: 0;
+                    }
+
+                    /*
+                    &:after{
+                        content: "Cliquer pour voir";
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 1rem;
+                        letter-spacing: 0.1em;
+                        line-height: 1em;
+                    }
+                    */
+                }
+            }
+
+            .work__link.work__link--img{
+                max-width: 100%;
+                display: block;
+
+                .work__img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@use '../lib';
+
+.block.block--books{
+
+    .book__li{
+
+        .book__el{
+
+            .book__img{
+                max-width: 100%;
+            }
+
+            
+        }
+    }
+
+
+    @include lib.tablet{
+        .book__li{
+            grid-column: 1/13;
+
+            .book__el{
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                column-gap: 1rem;
+    
+                .book__img{
+                    grid-column: 1/13;
+                }
+    
+                
+            }
+        }
+    }
+}
+
+
+.book__info{
+
+    .book__price{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    .book__detail__li{
+        margin-bottom: 3.5rem;
+    
+        .book__detail__el{
+    
+            .book__detail{
+                margin: 0;
+            }
+        }
+    }
+
+
+    @include lib.tablet{
+        grid-column: 3/11;
+    }
+}

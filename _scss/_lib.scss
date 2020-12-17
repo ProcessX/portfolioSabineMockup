@@ -1,0 +1,32 @@
+//COLORS
+$ivory: #E5DED3;
+$ivory-dark: #D0C7B9;
+$ivory-light: #F1EAE0;
+
+$blue: #1A355D;
+$blue-dark: #091B37;
+
+
+//BREAKING POINTS
+$res-tablet: 768px;
+$res-tablet-large: 1024px;
+
+
+//QUERIES
+@mixin mobile-only {
+    @media (max-width: #{$res-tablet - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$res-tablet}) {
+        @content;
+    }
+}
+
+@mixin tablet-large {
+    @media (min-width: #{$res-tablet-large}) {
+        @content;
+    }
+}
