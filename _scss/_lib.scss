@@ -25,9 +25,26 @@ $res-tablet-large: 1024px;
     }
 }
 
+@mixin smallerThan-tablet{
+    @media (max-width: #{$res-tablet - 1px}) {
+        @content;
+    }
+}
+
+@mixin only-tablet {
+    @media (min-width: #{$res-tablet}) and (max-width: #{$res-tablet-large - 1px}) {
+        @content;
+    }
+}
+
 @mixin tablet-large {
     @media (min-width: #{$res-tablet-large}) {
         @content;
     }
 }
 
+@mixin smallerThan-tablet-large{
+    @media (max-width: #{$res-tablet-large - 1px}) {
+        @content;
+    }
+}

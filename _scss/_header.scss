@@ -9,62 +9,32 @@ header{
     z-index: 1000;
 
     .navbar{
-        background-color: lib.$blue;
-        color: lib.$ivory-light;
-        font-family: 'Playfair Display', serif;
         text-transform: uppercase;
-        font-size: 2rem;
-        line-height: 1em;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform: translateX(100vw);
 
         &--open{
-            transform: translateX(0);
         }
 
         .link__li{
-            counter-reset: index-menu;
-            vertical-align: center;
 
             .link__el{
-                text-align: center;
-                padding: 1rem 0;
-                position: relative;
+
     
                 &:first-child{
                 }
 
                 &:after{
-                    content: "";
-                    height: 1px;
-                    width: 3rem;
-                    background-color: lib.$blue-dark;
-                    position: absolute;
-                    bottom: 0;
-                    left: calc(50% - 1.5rem);
+
                 }
 
                 &:last-child{
                     &:after{
-                        content: none;
                     }
                 }
 
                 .link{
-                    counter-increment: index-menu;
-                    color: inherit;
-                    position: relative;
-                    line-height: 10px;
+                    
 
                     &:before{
-                        content: counter(index-menu);
                     }
                 }
             }
@@ -72,9 +42,110 @@ header{
     }
 
 
-    @include lib.tablet{
+    @include lib.smallerThan-tablet-large{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+
+        .navbar{
+            background-color: lib.$blue;
+            color: lib.$ivory-light;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+            font-size: 2rem;
+            line-height: 1em;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translateX(100vw);
+
+            &--open{
+                transform: translateX(0);
+            }
+
+            .link__li{
+                counter-reset: index-menu;
+                vertical-align: center;
+
+                .link__el{
+                    text-align: center;
+                    padding: 1rem 0;
+                    position: relative;
+        
+                    &:first-child{
+                    }
+
+                    &:after{
+                        content: "";
+                        height: 1px;
+                        width: 3rem;
+                        background-color: lib.$blue-dark;
+                        position: absolute;
+                        bottom: 0;
+                        left: calc(50% - 1.5rem);
+                    }
+
+                    &:last-child{
+                        &:after{
+                            content: none;
+                        }
+                    }
+
+                    .link{
+                        counter-increment: index-menu;
+                        color: inherit;
+                        position: relative;
+                        line-height: 10px;
+
+                        &:before{
+                            content: counter(index-menu);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include lib.only-tablet{
         .navbar{
             font-size: 3.5rem;
+        }
+    }
+
+
+    @include lib.tablet-large{
+        padding: 0 3rem;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: lib.$ivory;
+
+        .btn--burger{
+            display: none;
+        }
+
+        .navbar{
+
+            .link__li{
+                display: flex;
+
+                .link__el{
+
+                    &:first-child{
+                        flex-grow: 2;
+                    }
+
+                    &:not(:first-child){
+                        margin-left: 3rem;
+                    }
+                }
+            }
         }
     }
 }
