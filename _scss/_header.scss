@@ -61,6 +61,7 @@ header{
                     counter-increment: index-menu;
                     color: inherit;
                     position: relative;
+                    line-height: 10px;
 
                     &:before{
                         content: counter(index-menu);
