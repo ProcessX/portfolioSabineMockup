@@ -58,4 +58,35 @@
             justify-self: start;
         }
     }
+
+
+    @include lib.tablet-large{
+
+        .event__img{
+            grid-row: 2/6;
+            grid-column: -1/-14;
+        }
+
+        .event__title{
+            grid-row: 2;
+            grid-column: 1/20;
+        }
+
+        .event__description{
+            grid-row: 3;
+            grid-column: 1/12;
+            margin: 0;
+        }
+
+        .event__info{
+            grid-row: 4;
+            grid-column: 2/12;
+        }
+
+        .btn--info{
+            grid-row: 5;
+            grid-column: 2/12;
+            justify-self: start;
+        }
+    }
 }

@@ -57,6 +57,21 @@
             grid-column: 2/12;
         }
     }
+
+
+    @include lib.tablet{
+        .about__mugshot{
+            grid-column: -1/-10;
+        }
+
+        .para{
+            grid-column: 1/12;
+        }
+
+        .about__details{
+            grid-column: 1/12;
+        }
+    }
 }
 
 
@@ -96,6 +111,31 @@
 
                         .career__step{
                             margin-top: 0;
+                        }
+                    }
+        
+                    .career__step{
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include lib.tablet-large{
+
+        .details__el{
+
+            .career__year{
+            }
+        
+            .career__li{
+        
+                .career__el{
+
+                    &:first-child{
+
+                        .career__step{
                         }
                     }
         

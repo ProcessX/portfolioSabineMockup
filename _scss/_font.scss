@@ -82,6 +82,10 @@ a{
     @include lib.tablet{
         grid-column: 1/13;
     }
+
+    @include lib.tablet-large{
+        grid-column: 1/25;
+    }
 }
 
 

@@ -72,4 +72,12 @@ $contact-icon-size: 5rem;
             grid-column: 1/13;
         }
     }
+
+
+    @include lib.tablet-large{
+
+        .contact__li{
+            grid-column: 1/-1;
+        }
+    }
 }

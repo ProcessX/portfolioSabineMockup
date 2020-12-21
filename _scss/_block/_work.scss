@@ -107,4 +107,30 @@ $img-size-tablet: 320px;
             }
         }
     }
+
+
+    @include lib.tablet-large{
+        .work__li{
+            grid-column: 1/25;
+
+            .work__el{
+
+                .work__title{
+
+                    .work__link{
+
+                        &:after{
+
+                        }
+                    }
+                }
+
+                .work__link.work__link--img{
+
+                    .work__img{
+                    }
+                }
+            }
+        }
+    }
 }

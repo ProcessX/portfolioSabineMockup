@@ -23,7 +23,6 @@
 
 
     @include lib.tablet-large{
-        background-color: lawngreen;
         grid-template-columns: repeat(24, 1fr);
     }
 }

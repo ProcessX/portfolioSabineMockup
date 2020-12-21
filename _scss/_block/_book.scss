@@ -17,7 +17,7 @@
 
     @include lib.tablet{
         .book__li{
-            grid-column: 1/13;
+            grid-column: 1/-1;
 
             .book__el{
                 display: grid;
@@ -25,10 +25,23 @@
                 column-gap: 1rem;
     
                 .book__img{
-                    grid-column: 1/13;
+                    grid-column: 1/-1;
                 }
+            }
+        }
+    }
+
+
+    @include lib.tablet-large{
+        .book__li{
+
+            .book__el{
+                grid-template-columns: repeat(24, 1fr);
     
-                
+                .book__img{
+                    grid-column: 1/14;
+                    
+                }
             }
         }
     }
@@ -57,5 +70,9 @@
 
     @include lib.tablet{
         grid-column: 3/11;
+    }
+
+    @include lib.tablet-large{
+        grid-column: -1/-11;
     }
 }

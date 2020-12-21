@@ -43,4 +43,16 @@
             grid-column: 2/12;
         }
     }
+
+
+    @include lib.tablet-large{
+
+        .intro__title{
+            grid-column: 1/25;
+        }
+
+        .intro__img{
+            grid-column: 5/21;
+        }
+    }
 }
