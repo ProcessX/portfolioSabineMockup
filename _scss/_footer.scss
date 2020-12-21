@@ -38,9 +38,11 @@
     }
 
     @include lib.tablet{
+
         .footer__info__li{
             display: flex;
             justify-content: space-between;
+            grid-column: 1/-1;
 
             .footer__info__el{
                 margin: 0;

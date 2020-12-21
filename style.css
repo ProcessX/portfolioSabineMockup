@@ -678,6 +678,7 @@ header .navbar .link__li .link__el .link:before {
   .block.block--footer .footer__info__li {
     display: flex;
     justify-content: space-between;
+    grid-column: 1/-1;
   }
   .block.block--footer .footer__info__li .footer__info__el {
     margin: 0;
