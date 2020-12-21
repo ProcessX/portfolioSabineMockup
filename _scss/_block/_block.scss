@@ -12,11 +12,18 @@
     padding: 0 1rem;
     box-sizing: border-box;
 
+
     @include lib.tablet{
         padding: 0 3rem;
 
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         column-gap: 1rem;
+    }
+
+
+    @include lib.tablet-large{
+        background-color: lawngreen;
+        grid-template-columns: repeat(24, 1fr);
     }
 }

@@ -76,6 +76,35 @@
             }
         }
     }
+
+
+    @include lib.tablet{
+
+        .details__el{
+            display: flex;
+
+            .career__year{
+                margin-right: 3rem;
+            }
+        
+            .career__li{
+        
+                .career__el{
+                    padding-left: 0;
+
+                    &:first-child{
+
+                        .career__step{
+                            margin-top: 0;
+                        }
+                    }
+        
+                    .career__step{
+                    }
+                }
+            }
+        }
+    }
 }
 
 
