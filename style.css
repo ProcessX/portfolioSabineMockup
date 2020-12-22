@@ -530,12 +530,30 @@ header .navbar {
   }
   .block.block--about .para {
     grid-column: 1/12;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .block.block--about .para:first-of-type {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
+  .block.block--about .para:last-of-type {
+    margin-bottom: 0;
   }
   .block.block--about .about__details {
     grid-column: 1/12;
+    margin-top: 10rem;
   }
   .block.block--about .about__details--relatives {
     grid-column: -1/-12;
+  }
+}
+@media (min-width: 1280px) {
+  .block.block--about .about__mugshot {
+    grid-column: -1/-12;
+  }
+  .block.block--about .para:first-of-type {
+    margin-top: 8rem;
   }
 }
 
@@ -563,6 +581,12 @@ header .navbar {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .about__details--career {
+    margin-top: 20rem !important;
+  }
+}
+
 .block.block--contact .contact__li .contact__el {
   text-align: center;
   margin-bottom: 4rem;

@@ -67,15 +67,43 @@
 
         .para{
             grid-column: 1/12;
+            margin-top: 0;
+            margin-bottom: 1rem;
+
+            &:first-of-type{
+                margin-top: 6rem;
+                margin-bottom: 2rem;
+            }
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
         }
 
         .about__details{
             grid-column: 1/12;
+            margin-top: 10rem;
 
             &--relatives{
                 grid-column: -1/-12;
-
             }
+        }
+    }
+
+
+    @include lib.desktop{
+        .about__mugshot{
+            grid-column: -1/-12;
+        }
+
+        .para{
+            &:first-of-type{
+                margin-top: 8rem;
+            }
+        }
+
+        .about__details{
+            
         }
     }
 
@@ -131,6 +159,32 @@
 
 
     @include lib.tablet-large{
+
+        .details__el{
+
+            .career__year{
+            }
+        
+            .career__li{
+        
+                .career__el{
+
+                    &:first-child{
+
+                        .career__step{
+                        }
+                    }
+        
+                    .career__step{
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include lib.desktop{
+        margin-top: 20rem !important;
 
         .details__el{
 
