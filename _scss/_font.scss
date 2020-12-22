@@ -38,6 +38,11 @@ a{
     @include lib.tablet{
         font-size: 5rem;
     }
+
+    @include lib.tablet-large{
+        font-size: 7rem;
+    }
+
 }
 
 .title--4{
@@ -45,6 +50,14 @@ a{
 
     @include lib.tablet{
         font-size: 9rem;
+    }
+
+    @include lib.tablet-large{
+        font-size: 12rem;
+    }
+
+    @include lib.desktop{
+        font-size: 15rem
     }
 }
 

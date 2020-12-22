@@ -46,9 +46,11 @@
 
 
     @include lib.tablet-large{
+        margin-top: 0;
 
         .intro__title{
             grid-column: 1/25;
+            margin-top: 3rem;
         }
 
         .intro__img{

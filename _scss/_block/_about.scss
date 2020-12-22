@@ -59,9 +59,10 @@
     }
 
 
-    @include lib.tablet{
+    @include lib.tablet-large{
         .about__mugshot{
             grid-column: -1/-10;
+            grid-row: 2/5;
         }
 
         .para{
@@ -70,9 +71,16 @@
 
         .about__details{
             grid-column: 1/12;
+
+            &--relatives{
+                grid-column: -1/-12;
+
+            }
         }
     }
+
 }
+
 
 
 .about__details--career{

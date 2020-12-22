@@ -10,6 +10,7 @@ $blue-dark: #091B37;
 //BREAKING POINTS
 $res-tablet: 768px;
 $res-tablet-large: 1024px;
+$res-desktop: 1280px;
 
 
 //QUERIES
@@ -45,6 +46,12 @@ $res-tablet-large: 1024px;
 
 @mixin smallerThan-tablet-large{
     @media (max-width: #{$res-tablet-large - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$res-desktop}) {
         @content;
     }
 }
