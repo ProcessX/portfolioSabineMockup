@@ -369,24 +369,19 @@ header .navbar {
 }
 @media (min-width: 1280px) {
   .block--event .event__img {
-    grid-row: 2/6;
     grid-column: -1/-17;
   }
   .block--event .event__title {
-    grid-row: 2;
     grid-column: 1/20;
   }
   .block--event .event__description {
-    grid-row: 3;
     grid-column: 1/9;
     margin: 0;
   }
   .block--event .event__info {
-    grid-row: 4;
     grid-column: 2/9;
   }
   .block--event .btn--info {
-    grid-row: 5;
     grid-column: 2/9;
     justify-self: start;
   }
@@ -411,15 +406,7 @@ header .navbar {
 }
 .block.block--work .work__li .work__el .work__title .work__link {
   position: relative;
-  /*
-  &:after{
-      content: "Cliquer pour voir";
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-      line-height: 1em;
-  }
-  */
+  line-height: 80%;
 }
 .block.block--work .work__li .work__el .work__title .work__link:before {
   content: "0" counter(index-work);
@@ -427,7 +414,8 @@ header .navbar {
   font-size: 1rem;
   position: absolute;
   right: calc(100% + 0.3em);
-  top: 0;
+  top: 1.1rem;
+  line-height: 100%;
 }
 .block.block--work .work__li .work__el .work__link.work__link--img {
   max-width: 100%;
@@ -445,6 +433,7 @@ header .navbar {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1rem;
+    margin-bottom: 15rem;
   }
   .block.block--work .work__li .work__el .work__title {
     grid-column: 1/13;
@@ -455,6 +444,9 @@ header .navbar {
   .block.block--work .work__li .work__el .work__title .work__link {
     display: flex;
     flex-direction: column;
+  }
+  .block.block--work .work__li .work__el .work__title .work__link::before {
+    top: 0.36rem;
   }
   .block.block--work .work__li .work__el .work__title .work__link:after {
     content: "Cliquer pour voir";
@@ -478,6 +470,12 @@ header .navbar {
 @media (min-width: 1024px) {
   .block.block--work .work__li {
     grid-column: 1/25;
+  }
+  .block.block--work .work__li .work__el {
+    max-height: 480px;
+  }
+  .block.block--work .work__li .work__el .work__title .work__link::before {
+    top: 0.58rem;
   }
 }
 
