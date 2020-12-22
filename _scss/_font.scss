@@ -34,6 +34,7 @@ a{
 
 .title--3{
     font-size: 3.5rem;
+    line-height: 80%;
 
     @include lib.tablet{
         font-size: 5rem;
@@ -111,6 +112,7 @@ a{
 
 .para--big{
     font-size: 1.24rem;
+    font-weight: lighter;
 }
 
 .para--upper{
