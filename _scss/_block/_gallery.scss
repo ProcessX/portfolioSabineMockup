@@ -1,15 +1,20 @@
+@use '../lib';
+
 .block.block--gallery{
+    position: relative;
 
-    .link--back{
-
-    }
-
-    .title{
-
+    &::before{
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: lib.$blue;
+        margin-bottom: 6rem;
     }
 
     .artwork__li{
         max-width: 100%;
+        cursor: pointer;
 
         .artwork__el{
             margin-bottom: 6rem;
@@ -37,5 +42,11 @@
                 }
             }
         }
+    }
+
+    .gallery__nav{
+        display: flex;
+        justify-content: space-between;
+        margin: 10rem 0;
     }
 }
