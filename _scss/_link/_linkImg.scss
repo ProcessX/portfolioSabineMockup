@@ -1,0 +1,14 @@
+@use '../lib';
+
+.link.link--img{
+    overflow: hidden;
+
+    &:hover{
+        transform: scale(95%);
+        background-color: red;
+
+        img{
+            transform: scale(110%);
+        }
+    }
+}

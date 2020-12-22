@@ -765,6 +765,21 @@ header .navbar {
   height: 2px;
 }
 
+.link.link--img {
+  overflow: hidden;
+}
+.link.link--img:hover {
+  transform: scale(95%);
+  background-color: red;
+}
+.link.link--img:hover img {
+  transform: scale(110%);
+}
+
+.link {
+  cursor: pointer;
+}
+
 .block.block--footer .footer__info__li {
   position: relative;
   padding-top: 1rem;
