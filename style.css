@@ -837,6 +837,30 @@ header .navbar {
   }
 }
 
+.block.block--gallery .artwork__li {
+  max-width: 100%;
+}
+.block.block--gallery .artwork__li .artwork__el {
+  margin-bottom: 6rem;
+}
+.block.block--gallery .artwork__li .artwork__el:last-child {
+  margin: 0;
+}
+.block.block--gallery .artwork__li .artwork__el img {
+  max-width: 100%;
+}
+.block.block--gallery .artwork__li .artwork__el .artwork__info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+.block.block--gallery .artwork__li .artwork__el .artwork__info .artwork__title {
+  margin: 0 1rem 0 0;
+}
+.block.block--gallery .artwork__li .artwork__el .artwork__info .artwork__price {
+  margin: 0;
+}
+
 .block {
   width: 100%;
   max-width: 1440px;

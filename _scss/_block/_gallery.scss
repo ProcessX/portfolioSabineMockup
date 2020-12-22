@@ -1,0 +1,41 @@
+.block.block--gallery{
+
+    .link--back{
+
+    }
+
+    .title{
+
+    }
+
+    .artwork__li{
+        max-width: 100%;
+
+        .artwork__el{
+            margin-bottom: 6rem;
+
+            &:last-child{
+                margin: 0;
+            }
+
+            img{
+                max-width: 100%;
+
+            }
+
+            .artwork__info{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 1rem;
+
+                .artwork__title{
+                    margin: 0 1rem 0 0;
+                }
+
+                .artwork__price{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
