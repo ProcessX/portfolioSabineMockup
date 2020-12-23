@@ -14,10 +14,10 @@
 
     .artwork__li{
         max-width: 100%;
-        cursor: pointer;
 
         .artwork__el{
             margin-bottom: 6rem;
+            cursor: pointer;
 
             &:last-child{
                 margin: 0;
@@ -48,5 +48,32 @@
         display: flex;
         justify-content: space-between;
         margin: 10rem 0;
+    }
+
+
+    @include lib.tablet{
+
+        &::before{
+            grid-column: 1/-1;
+        }
+
+        .artwork__li{
+            grid-column: 1/-1;
+        }
+
+        .gallery__nav{
+            grid-column: 1/-1;
+        }
+    }
+
+
+    @include lib.tablet-large{
+        .artwork__li{
+            grid-column: 5/-5;
+        }
+
+        .gallery__nav{
+            grid-column: 5/-5;
+        }
     }
 }

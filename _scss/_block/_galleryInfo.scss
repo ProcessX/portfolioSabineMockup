@@ -2,5 +2,54 @@
 
 .block.block--galleryInfo{
     padding-bottom: 10rem;
+
+    img{
+        max-width: 100%;
+    }
     
+    @include lib.tablet{
+        .link--back{
+            grid-column: 1/-1;
+        }
+
+        .title{
+            grid-column: 1/-1;
+        }
+
+        .para{
+            grid-column: 1/-1;
+        }
+    }
+
+
+    @include lib.smallerThan-tablet-large{
+        img{
+            display: none;
+        }
+    }
+
+
+    @include lib.tablet-large{
+        grid-template-rows: [top] auto auto auto [bottom];
+
+        .link--back{
+            grid-column: 1/12;
+            grid-row-start: 1;
+        }
+
+        .title{
+            grid-column: 1/12;
+            grid-row-start: 2;
+        }
+
+        .gallery__description{
+            grid-column: 1/12;
+            grid-row-start: 3;
+        }
+
+        img{
+            grid-column: -1/-12;
+            grid-row: top / bottom;
+        }
+    }
 }
