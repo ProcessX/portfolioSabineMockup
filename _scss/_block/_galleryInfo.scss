@@ -1,13 +1,38 @@
 @use '../lib';
 
+$burgerBtn-height-mobile: 82px;
+$burgerBtn-height-tablet: 144px;
+
 .block.block--galleryInfo{
     padding-bottom: 10rem;
+    grid-template-rows: $burgerBtn-height-mobile auto auto;
 
     img{
         max-width: 100%;
     }
+
+    .link--back{
+        align-self: center;
+    }
+
+    .title{
+        margin-top: 10rem;
+        margin-bottom: 0;
+    }
+
+    .gallery__description{
+        margin-top: 3rem;
+
+        .para{
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+    }
     
     @include lib.tablet{
+        grid-template-rows: $burgerBtn-height-tablet auto auto;
+
         .link--back{
             grid-column: 1/-1;
         }
@@ -16,13 +41,19 @@
             grid-column: 1/-1;
         }
 
-        .para{
+        .gallery__description{
             grid-column: 1/-1;
+            .para{
+                font-size: 1.5rem;
+                font-weight: lighter;
+            }
         }
     }
 
 
     @include lib.smallerThan-tablet-large{
+        grid-template-columns: auto;
+        
         img{
             display: none;
         }
@@ -35,20 +66,46 @@
         .link--back{
             grid-column: 1/12;
             grid-row-start: 1;
+            margin-top: 4rem;
         }
 
         .title{
             grid-column: 1/12;
             grid-row-start: 2;
+            margin-top: 6rem;
         }
 
         .gallery__description{
             grid-column: 1/12;
             grid-row-start: 3;
+
+            .para{
+                font-size: 1.1rem;
+            }
         }
 
         img{
-            grid-column: -1/-12;
+            grid-column: -1/-14;
+            grid-row: top / bottom;
+        }
+    }
+
+    @include lib.desktop{
+        .link--back{
+            grid-column: 1/10;
+        }
+
+        .title{
+            grid-column: 1/10;
+        }
+
+        .gallery__description{
+            grid-column: 1/10;
+            grid-row-start: 3;
+        }
+
+        img{
+            grid-column: -1/-15;
             grid-row: top / bottom;
         }
     }

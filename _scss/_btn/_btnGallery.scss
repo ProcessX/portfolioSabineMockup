@@ -45,6 +45,10 @@ $btn-arrow-width: 1.5rem;
     &--back{
         padding-left: $btn-arrow-width;
 
+        &::before{
+            content: "Retour";
+        }
+
         &::after{
             left: 0;
         }
