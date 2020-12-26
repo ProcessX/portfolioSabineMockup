@@ -11,6 +11,7 @@ $img-size-tablet-large: 480px;
         .work__el{
             counter-increment: index-work;
             margin: 9rem 0;
+            pointer-events: none;
 
             &:first-child{
                 margin-top: 0;
@@ -20,9 +21,25 @@ $img-size-tablet-large: 480px;
                 margin-bottom: 0;
             }
 
+            > *{
+                pointer-events: all;
+            }
+
+            &:hover{
+                .work__link.work__link--img{
+                    transform: scale(0.95);
+
+                    .work__img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
             .work__title{
                 text-align: center;
                 margin: 1.5rem 0;
+                position: relative;
+                z-index: 50;
 
                 .work__link{
                     position: relative;
@@ -43,9 +60,15 @@ $img-size-tablet-large: 480px;
             .work__link.work__link--img{
                 max-width: 100%;
                 display: block;
+                overflow: hidden;
+                justify-self: end;
+                position: relative;
+                z-index: 10;
+                transform: scale(1);
 
                 .work__img{
                     max-width: 100%;
+                    transform: scale(1);
                 }
             }
         }

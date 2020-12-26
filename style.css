@@ -445,6 +445,7 @@ header .navbar {
 .block.block--work .work__li .work__el {
   counter-increment: index-work;
   margin: 9rem 0;
+  pointer-events: none;
 }
 .block.block--work .work__li .work__el:first-child {
   margin-top: 0;
@@ -452,9 +453,20 @@ header .navbar {
 .block.block--work .work__li .work__el:last-child {
   margin-bottom: 0;
 }
+.block.block--work .work__li .work__el > * {
+  pointer-events: all;
+}
+.block.block--work .work__li .work__el:hover .work__link.work__link--img {
+  transform: scale(0.95);
+}
+.block.block--work .work__li .work__el:hover .work__link.work__link--img .work__img {
+  transform: scale(1.1);
+}
 .block.block--work .work__li .work__el .work__title {
   text-align: center;
   margin: 1.5rem 0;
+  position: relative;
+  z-index: 50;
 }
 .block.block--work .work__li .work__el .work__title .work__link {
   position: relative;
@@ -472,9 +484,15 @@ header .navbar {
 .block.block--work .work__li .work__el .work__link.work__link--img {
   max-width: 100%;
   display: block;
+  overflow: hidden;
+  justify-self: end;
+  position: relative;
+  z-index: 10;
+  transform: scale(1);
 }
 .block.block--work .work__li .work__el .work__link.work__link--img .work__img {
   max-width: 100%;
+  transform: scale(1);
 }
 @media (min-width: 768px) {
   .block.block--work .work__li {
