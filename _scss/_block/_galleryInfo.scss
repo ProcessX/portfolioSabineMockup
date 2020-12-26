@@ -13,6 +13,7 @@ $burgerBtn-height-tablet: 144px;
 
     .link--back{
         align-self: center;
+        justify-self: start;
     }
 
     .title{
@@ -62,6 +63,7 @@ $burgerBtn-height-tablet: 144px;
 
     @include lib.tablet-large{
         grid-template-rows: [top] auto auto auto [bottom];
+        margin-top: 10rem;
 
         .link--back{
             grid-column: 1/12;

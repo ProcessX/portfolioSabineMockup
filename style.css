@@ -785,9 +785,14 @@ header .navbar {
 
 .block.block--collection {
   display: grid;
+  grid-template-rows: 82px auto auto auto;
+}
+.block.block--collection .link--back {
+  align-self: center;
+  justify-self: start;
 }
 .block.block--collection .title {
-  margin-top: 12rem;
+  margin-top: 10rem;
   margin-bottom: 0;
   text-align: right;
   justify-self: end;
@@ -831,6 +836,9 @@ header .navbar {
   justify-self: center;
 }
 @media (min-width: 768px) {
+  .block.block--collection {
+    grid-template-rows: 144px auto auto auto;
+  }
   .block.block--collection .link--back {
     grid-row: 1;
     grid-column: 1/-1;
@@ -838,6 +846,7 @@ header .navbar {
   .block.block--collection .title {
     grid-row: 2;
     grid-column: 1/-1;
+    margin-top: 5rem;
   }
   .block.block--collection .gallery__li {
     grid-row: 3;
@@ -858,7 +867,10 @@ header .navbar {
     grid-column: 1/-1;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  .block.block--collection {
+    grid-template-rows: auto auto auto;
+  }
   .block.block--collection .link--back {
     grid-row: 1;
     grid-column: 1/4;
@@ -868,6 +880,7 @@ header .navbar {
     grid-row: 1;
     grid-column: -1/-20;
     justify-self: end;
+    margin-top: 13rem;
   }
   .block.block--collection .gallery__li {
     grid-row: 2;
@@ -972,6 +985,7 @@ header .navbar {
 }
 .block.block--galleryInfo .link--back {
   align-self: center;
+  justify-self: start;
 }
 .block.block--galleryInfo .title {
   margin-top: 10rem;
@@ -1012,6 +1026,7 @@ header .navbar {
 @media (min-width: 1024px) {
   .block.block--galleryInfo {
     grid-template-rows: [top] auto auto auto [bottom];
+    margin-top: 10rem;
   }
   .block.block--galleryInfo .link--back {
     grid-column: 1/12;
