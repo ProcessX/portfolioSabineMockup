@@ -37,6 +37,14 @@
 
         .intro__title{
             grid-column: 1/13;
+
+            .title--home{
+
+                &--upperline{
+                    margin-bottom: -0.5rem;
+                    padding-bottom: 0.7rem;
+                }
+            }
         }
 
         .intro__img{
@@ -50,11 +58,35 @@
 
         .intro__title{
             grid-column: 1/25;
-            margin-top: 3rem;
+            margin-top: 2.25rem;
+
+            .title--home{
+
+                &--upperline{
+                    margin-bottom: -0.65rem;
+                    padding-bottom: 0.9rem;
+                }
+            }
         }
 
         .intro__img{
             grid-column: 5/21;
+        }
+    }
+
+
+    @include lib.desktop{
+
+        .intro__title{
+            margin-top: 2rem;
+
+            .title--home{
+
+                &--upperline{
+                    margin-bottom: -01.1rem;
+                    padding-bottom: 0.8rem;
+                }
+            }
         }
     }
 }
