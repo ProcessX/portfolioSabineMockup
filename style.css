@@ -490,10 +490,14 @@ header .navbar {
   position: relative;
   z-index: 10;
   transform: scale(1);
+  transition-duration: 0.5s;
+  transition-property: transform;
 }
 .block.block--work .work__li .work__el .work__link.work__link--img .work__img {
   max-width: 100%;
   transform: scale(1);
+  transition-duration: 0.5s;
+  transition-property: transform;
 }
 @media (min-width: 768px) {
   .block.block--work .work__li {
