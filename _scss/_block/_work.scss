@@ -84,7 +84,20 @@ $img-size-tablet-large: 480px;
                 display: grid;
                 grid-template-columns: repeat(12, 1fr);
                 column-gap: 1rem;
-                margin-bottom: 15rem;
+                margin-bottom: 10rem;
+
+                &:nth-child(2n){
+                    .work__link.work__link--img{
+                        max-height: inherit;
+                        grid-column: -1/-7;
+                        grid-row: 1/2;
+                        align-self: center;
+    
+                        .work__img{
+                            max-height: inherit;
+                        }
+                    }
+                }
 
                 .work__title{
                     grid-column: 1/13;
@@ -133,6 +146,39 @@ $img-size-tablet-large: 480px;
 
             .work__el{
                 max-height: $img-size-tablet-large;
+                margin-bottom: 12rem;
+
+
+                .work__title{
+
+                    .work__link{
+
+                        &::before{
+                            top: 0.58rem;
+                        }
+
+                        &:after{
+
+                        }
+                    }
+                }
+
+                .work__link.work__link--img{
+
+                    .work__img{
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include lib.desktop{
+        .work__li{
+
+            .work__el{
+                margin-bottom: 15rem;
+
 
                 .work__title{
 

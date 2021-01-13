@@ -497,7 +497,16 @@ header .navbar {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1rem;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
+  }
+  .block.block--work .work__li .work__el:nth-child(2n) .work__link.work__link--img {
+    max-height: inherit;
+    grid-column: -1/-7;
+    grid-row: 1/2;
+    align-self: center;
+  }
+  .block.block--work .work__li .work__el:nth-child(2n) .work__link.work__link--img .work__img {
+    max-height: inherit;
   }
   .block.block--work .work__li .work__el .work__title {
     grid-column: 1/13;
@@ -537,6 +546,15 @@ header .navbar {
   }
   .block.block--work .work__li .work__el {
     max-height: 480px;
+    margin-bottom: 12rem;
+  }
+  .block.block--work .work__li .work__el .work__title .work__link::before {
+    top: 0.58rem;
+  }
+}
+@media (min-width: 1280px) {
+  .block.block--work .work__li .work__el {
+    margin-bottom: 15rem;
   }
   .block.block--work .work__li .work__el .work__title .work__link::before {
     top: 0.58rem;
@@ -765,7 +783,10 @@ header .navbar {
   }
 }
 
-.block.block--books .book__li .book__el .book__img {
+.block.block--books .book__li .book__el .book__imgContainer {
+  max-width: 100%;
+}
+.block.block--books .book__li .book__el .book__imgContainer .book__img {
   max-width: 100%;
 }
 @media (min-width: 768px) {
@@ -777,7 +798,7 @@ header .navbar {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1rem;
   }
-  .block.block--books .book__li .book__el .book__img {
+  .block.block--books .book__li .book__el .book__imgContainer {
     grid-column: 1/-1;
   }
 }
@@ -785,8 +806,19 @@ header .navbar {
   .block.block--books .book__li .book__el {
     grid-template-columns: repeat(24, 1fr);
   }
-  .block.block--books .book__li .book__el .book__img {
+  .block.block--books .book__li .book__el .book__imgContainer {
     grid-column: 1/14;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .block.block--books .book__li .book__el .book__imgContainer .book__img {
+    height: 100%;
+    justify-self: center;
   }
 }
 
