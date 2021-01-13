@@ -64,6 +64,8 @@ header{
             top: 0;
             left: 0;
             transform: translateX(100vw);
+            transition-duration: lib.$anim-burger-duration;
+            transition-property: transform;
 
             &--open{
                 transform: translateX(0);

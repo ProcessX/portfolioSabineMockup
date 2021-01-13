@@ -13,6 +13,14 @@ $res-tablet-large: 1024px;
 $res-desktop: 1280px;
 
 
+//ANIMATION -- BURGER MENU
+$anim-burger-duration: 0.7s;
+
+
+//ANIMATION -- BTN OUTLINE
+$anim-btnOutline-duration: 0.25s;
+
+
 //QUERIES
 @mixin mobile-only {
     @media (max-width: #{$res-tablet - 1px}) {

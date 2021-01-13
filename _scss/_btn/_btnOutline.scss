@@ -6,6 +6,8 @@
     border: solid 1px lib.$blue;
     padding: 0.8rem 1.6rem;
     letter-spacing: 0.1em;
+    transition-property: background-color, color;
+    transition-duration: lib.$anim-btnOutline-duration;
 
     &:hover,&:focus{
         background-color: lib.$blue;

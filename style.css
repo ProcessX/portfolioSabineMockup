@@ -163,6 +163,8 @@ header .navbar {
     top: 0;
     left: 0;
     transform: translateX(100vw);
+    transition-duration: 0.7s;
+    transition-property: transform;
   }
   header .navbar--open {
     transform: translateX(0);
@@ -247,6 +249,9 @@ header .navbar {
   box-sizing: content-box;
   z-index: 100;
   position: relative;
+  transition-duration: 0.7s;
+  transition-property: background-color, border-color;
+  -moz-transition-property: background-color, border-color;
 }
 .btn.btn--burger::before, .btn.btn--burger::after {
   content: "";
@@ -284,6 +289,8 @@ header .navbar {
   border: solid 1px #1A355D;
   padding: 0.8rem 1.6rem;
   letter-spacing: 0.1em;
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
 }
 .btn.btn--outline:hover, .btn.btn--outline:focus {
   background-color: #1A355D;
