@@ -4,20 +4,21 @@
     margin-top: 11rem;
 
     .intro__title{
-        margin-bottom: 0;
+        //margin-bottom: 0;
+        line-height: 1em;
 
         .title--home{
             display: block;
             position: relative;
 
             &--upperline{
-                padding-bottom: 0.16em;
-                margin-bottom: 0.03em;
+                //padding-bottom: 0.16em;
+                //margin-bottom: 0.03em;
 
                 &::after{
                     content: "";
                     display: inline-block;
-                    height: 2px;
+                    height: 1px;
                     width: 100%;
                     position: absolute;
                     bottom: 0;
@@ -37,6 +38,7 @@
 
         .intro__title{
             grid-column: 1/13;
+            margin-bottom: 0;
 
             .title--home{
 

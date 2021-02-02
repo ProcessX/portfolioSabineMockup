@@ -87,12 +87,6 @@ a{
         margin-left: 0.5rem;
     }
 
-    &--intro{
-        &:before,&:after{
-            height: 2px;
-        }
-    }
-
     @include lib.tablet{
         grid-column: 1/13;
     }

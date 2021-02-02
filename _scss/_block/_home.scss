@@ -3,6 +3,10 @@
 .block.block--home{
     margin-bottom: 14rem;
 
+    .title{
+        text-align: center;
+    }
+
     @include lib.tablet{
         //display: grid;
 
