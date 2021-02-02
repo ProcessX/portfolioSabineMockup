@@ -32,6 +32,13 @@ $anim-linkArrow-duration: 0.25s;
 
 
 //QUERIES
+@mixin intro-exception {
+    @media (max-width: 420px) {
+        @content
+    }
+}
+
+
 @mixin mobile-only {
     @media (max-width: #{$res-tablet - 1px}) {
         @content;
