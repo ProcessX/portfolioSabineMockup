@@ -2,10 +2,16 @@
 
 .block.block--intro{
     margin-top: 11rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
 
     .intro__title{
         //margin-bottom: 0;
         line-height: 1em;
+        text-transform: none;
+        grid-column: 2/3;
+        text-align: center;
+        white-space: nowrap;
 
         .title--home{
             display: block;
@@ -29,15 +35,22 @@
         }
     }
 
+    .title--section{
+        grid-column: 2/3;
+    }
+
     .intro__img{
         max-width: 100%;
+        width: 800px;
+        grid-column: 1/-1;
+        justify-self: center;
     }
 
 
     @include lib.tablet{
 
         .intro__title{
-            grid-column: 1/13;
+            //grid-column: 1/13;
             margin-bottom: 0;
 
             .title--home{
@@ -50,16 +63,16 @@
         }
 
         .intro__img{
-            grid-column: 2/12;
+            //grid-column: 2/12;
         }
     }
 
 
     @include lib.tablet-large{
-        margin-top: 0;
+        margin-top: 16em;
 
         .intro__title{
-            grid-column: 1/25;
+            //grid-column: 1/25;
             margin-top: 2.25rem;
 
             .title--home{
@@ -72,7 +85,7 @@
         }
 
         .intro__img{
-            grid-column: 5/21;
+            //grid-column: 5/21;
         }
     }
 
