@@ -2,10 +2,17 @@
 
 .link.link--img{
     overflow: hidden;
+    transition-duration: lib.$anim-img-duration;
+    transition-property: transform;
+    display: block;
+
+    img{
+        transition-duration: lib.$anim-img-duration;
+        transition-property: transform;
+    }
 
     &:hover{
         transform: scale(95%);
-        background-color: red;
 
         img{
             transform: scale(110%);

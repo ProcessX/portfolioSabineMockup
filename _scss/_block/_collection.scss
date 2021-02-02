@@ -7,7 +7,7 @@ $burgerBtn-height-tablet: 144px;
     display: grid;
     grid-template-rows: $burgerBtn-height-mobile auto auto auto;
 
-    .link--back{
+    .link--arrow--back{
         align-self: center;
         justify-self: start;
     }
@@ -32,6 +32,7 @@ $burgerBtn-height-tablet: 144px;
 
             .gallery__img{
                 max-width: 100%;
+                display: block;
 
                 img{
                     max-width: 100%;
@@ -70,7 +71,7 @@ $burgerBtn-height-tablet: 144px;
     @include lib.tablet{
         grid-template-rows: $burgerBtn-height-tablet auto auto auto;
 
-        .link--back{
+        .link--arrow--back{
             grid-row: 1;
             grid-column: 1/-1;
         }
@@ -123,7 +124,7 @@ $burgerBtn-height-tablet: 144px;
     @include lib.tablet-large{
         grid-template-rows: auto auto auto;
 
-        .link--back{
+        .link--arrow--back{
             grid-row: 1;
             grid-column: 1/4;
             align-self: end;

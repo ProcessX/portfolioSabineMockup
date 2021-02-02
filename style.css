@@ -314,6 +314,8 @@ header .navbar {
   background-color: red;
   position: absolute;
   top: 0;
+  transition-property: transform;
+  transition-duration: 0.25s;
 }
 .btn.btn--gallery--next {
   padding-right: 1.5rem;
@@ -817,6 +819,9 @@ header .navbar {
   .block.block--books .book__li .book__el {
     grid-template-columns: repeat(24, 1fr);
   }
+  .block.block--books .book__li .book__el .book__info {
+    padding-bottom: 2rem;
+  }
   .block.block--books .book__li .book__el .book__imgContainer {
     grid-column: 1/14;
     width: 100%;
@@ -830,6 +835,7 @@ header .navbar {
   .block.block--books .book__li .book__el .book__imgContainer .book__img {
     height: 100%;
     justify-self: center;
+    max-width: none;
   }
 }
 
@@ -859,7 +865,7 @@ header .navbar {
   display: grid;
   grid-template-rows: 82px auto auto auto;
 }
-.block.block--collection .link--back {
+.block.block--collection .link--arrow--back {
   align-self: center;
   justify-self: start;
 }
@@ -881,6 +887,7 @@ header .navbar {
 }
 .block.block--collection .gallery__li .gallery__el .gallery__img {
   max-width: 100%;
+  display: block;
 }
 .block.block--collection .gallery__li .gallery__el .gallery__img img {
   max-width: 100%;
@@ -911,7 +918,7 @@ header .navbar {
   .block.block--collection {
     grid-template-rows: 144px auto auto auto;
   }
-  .block.block--collection .link--back {
+  .block.block--collection .link--arrow--back {
     grid-row: 1;
     grid-column: 1/-1;
   }
@@ -943,7 +950,7 @@ header .navbar {
   .block.block--collection {
     grid-template-rows: auto auto auto;
   }
-  .block.block--collection .link--back {
+  .block.block--collection .link--arrow--back {
     grid-row: 1;
     grid-column: 1/4;
     align-self: end;
@@ -990,7 +997,6 @@ header .navbar {
 }
 .block.block--gallery .artwork__li .artwork__el {
   margin-bottom: 6rem;
-  cursor: pointer;
 }
 .block.block--gallery .artwork__li .artwork__el:last-child {
   margin: 0;
@@ -1006,6 +1012,7 @@ header .navbar {
 .block.block--gallery .artwork__li .artwork__el .artwork__info .artwork__title {
   margin: 0 1rem 0 0;
   font-weight: normal;
+  cursor: pointer;
 }
 .block.block--gallery .artwork__li .artwork__el .artwork__info .artwork__price {
   margin: 0;
@@ -1055,7 +1062,7 @@ header .navbar {
 .block.block--galleryInfo img {
   max-width: 100%;
 }
-.block.block--galleryInfo .link--back {
+.block.block--galleryInfo .link--arrow--back {
   align-self: center;
   justify-self: start;
 }
@@ -1100,7 +1107,7 @@ header .navbar {
     grid-template-rows: [top] auto auto auto [bottom];
     margin-top: 10rem;
   }
-  .block.block--galleryInfo .link--back {
+  .block.block--galleryInfo .link--arrow--back {
     grid-column: 1/12;
     grid-row-start: 1;
     margin-top: 4rem;
@@ -1123,7 +1130,7 @@ header .navbar {
   }
 }
 @media (min-width: 1280px) {
-  .block.block--galleryInfo .link--back {
+  .block.block--galleryInfo .link--arrow--back {
     grid-column: 1/10;
   }
   .block.block--galleryInfo .title {
@@ -1161,6 +1168,9 @@ header .navbar {
   }
 }
 
+.link.link--arrow {
+  display: flex;
+}
 .link.link--arrow:hover::after {
   transform: translateX(1rem);
 }
@@ -1173,6 +1183,19 @@ header .navbar {
   background-repeat: no-repeat;
   background-size: contain;
   margin-left: 1rem;
+  transition-property: transform;
+  transition-duration: 0.25s;
+}
+.link.link--arrow--back {
+  flex-direction: row-reverse;
+}
+.link.link--arrow--back::after {
+  transform: rotate(180deg);
+  margin-left: 0;
+  margin-right: 1rem;
+}
+.link.link--arrow--back:hover::after {
+  transform: translateX(-1rem) rotate(180deg);
 }
 
 .link.link--animated {
@@ -1199,10 +1222,16 @@ header .navbar {
 
 .link.link--img {
   overflow: hidden;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  display: block;
+}
+.link.link--img img {
+  transition-duration: 0.5s;
+  transition-property: transform;
 }
 .link.link--img:hover {
   transform: scale(95%);
-  background-color: red;
 }
 .link.link--img:hover img {
   transform: scale(110%);

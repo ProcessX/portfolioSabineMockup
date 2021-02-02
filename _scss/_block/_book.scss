@@ -41,6 +41,10 @@
 
             .book__el{
                 grid-template-columns: repeat(24, 1fr);
+
+                .book__info{
+                    padding-bottom: 2rem;
+                }
     
                 .book__imgContainer{
                     grid-column: 1/14;
@@ -55,6 +59,7 @@
                     .book__img{
                         height: 100%;
                         justify-self: center;
+                        max-width: none;
                     }
                 }
             }

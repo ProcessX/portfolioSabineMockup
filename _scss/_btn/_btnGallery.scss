@@ -20,7 +20,8 @@ $btn-arrow-width: 1.5rem;
         background-color: red;
         position: absolute;
         top: 0;
-        
+        transition-property: transform;
+        transition-duration: lib.$anim-btnGallery-duration;
     }
 
     &--next{

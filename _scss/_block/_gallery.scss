@@ -17,7 +17,7 @@
 
         .artwork__el{
             margin-bottom: 6rem;
-            cursor: pointer;
+            
 
             &:last-child{
                 margin: 0;
@@ -36,6 +36,7 @@
                 .artwork__title{
                     margin: 0 1rem 0 0;
                     font-weight: normal;
+                    cursor: pointer;
                 }
 
                 .artwork__price{
